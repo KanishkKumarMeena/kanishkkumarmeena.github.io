@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kanishk Kumar Meena | Portfolio</title>
   
-  <!-- Fonts & Icons -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Styling -->
+
+  <!-- Styles -->
   <style>
     :root {
-      --primary: #2f80ed;
-      --background: #f9fafb;
-      --text: #333;
-      --card-bg: #fff;
-      --shadow: rgba(0, 0, 0, 0.05);
+      --primary: #00bfff;
+      --text: #f0f0f0;
+      --background: #0f1117;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --blur: blur(15px);
+      --shadow: rgba(0, 0, 0, 0.4);
+      --border: rgba(255, 255, 255, 0.2);
     }
 
     * {
@@ -29,22 +31,23 @@
       background-color: var(--background);
       color: var(--text);
       padding: 2rem;
+      backdrop-filter: var(--blur);
     }
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
     p {
       font-size: 1.1rem;
-      color: #555;
+      color: #ccc;
     }
 
     a {
@@ -63,43 +66,46 @@
     }
 
     .repo-card {
-      background: var(--card-bg);
-      border-radius: 10px;
-      padding: 1.2rem;
-      box-shadow: 0 2px 6px var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: var(--glass-bg);
+      border-radius: 15px;
+      padding: 1.5rem;
+      backdrop-filter: var(--blur);
+      box-shadow: 0 8px 20px var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .repo-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
     }
 
     .repo-card h3 {
       font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .repo-card p {
       font-size: 0.95rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      color: #bbb;
     }
 
     .repo-meta {
       font-size: 0.85rem;
-      color: #777;
+      color: #999;
     }
 
     footer {
       text-align: center;
-      margin-top: 3rem;
+      margin-top: 4rem;
       font-size: 0.9rem;
-      color: #888;
+      color: #666;
     }
 
     @media (max-width: 480px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -110,7 +116,7 @@
     <h1>Kanishk Kumar Meena</h1>
     <p>
       👋 Welcome to my GitHub Portfolio!<br>
-      Explore my projects below or visit my profile: 
+      Explore my projects or visit my profile: 
       <a href="https://github.com/KanishkKumarMeena" target="_blank">@KanishkKumarMeena</a>
     </p>
   </header>
@@ -122,10 +128,10 @@
   </section>
 
   <footer>
-    © 2025 Kanishk Kumar Meena · Powered by GitHub Pages
+    © 2025 Kanishk Kumar Meena · Made with ❤️ using GitHub Pages
   </footer>
 
-  <!-- Script to fetch repos -->
+  <!-- GitHub API Script -->
   <script>
     async function loadRepos() {
       try {
